@@ -3,68 +3,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Brisbane Removalists Design System */
+/* Brisbane Removalists Design System - Clean Blue Theme */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 214 32% 12%;
+    --foreground: 217 32% 17%;
 
     --card: 0 0% 100%;
-    --card-foreground: 214 32% 12%;
+    --card-foreground: 217 32% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 214 32% 12%;
+    --popover-foreground: 217 32% 17%;
 
-    --primary: 214 84% 45%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 214 15% 96%;
-    --secondary-foreground: 214 32% 12%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 217 32% 17%;
 
-    --muted: 214 15% 96%;
-    --muted-foreground: 214 16% 46%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 217 25% 45%;
 
-    --accent: 214 84% 92%;
-    --accent-foreground: 214 32% 12%;
+    --accent: 217 91% 95%;
+    --accent-foreground: 217 32% 17%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 31% 91%;
-    --input: 214 31% 91%;
-    --ring: 214 84% 45%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Brisbane Removalists Brand Colors */
-    --brand-blue: 214 84% 45%;
-    --brand-blue-light: 214 84% 92%;
-    --brand-blue-dark: 214 84% 35%;
-    --trust-blue: 214 100% 50%;
-    --reliable-blue: 210 100% 40%;
+    /* Clean Blue Theme Colors */
+    --clean-blue: 217 91% 60%;
+    --clean-blue-light: 217 91% 95%;
+    --clean-blue-dark: 217 91% 45%;
+    --clean-navy: 217 32% 17%;
+    --clean-gray: 210 20% 90%;
   }
 
   .dark {
-    --background: 214 32% 4%;
+    --background: 217 32% 4%;
     --foreground: 210 40% 98%;
-    --card: 214 32% 4%;
+    --card: 217 32% 4%;
     --card-foreground: 210 40% 98%;
-    --popover: 214 32% 4%;
+    --popover: 217 32% 4%;
     --popover-foreground: 210 40% 98%;
-    --primary: 214 84% 65%;
-    --primary-foreground: 214 32% 4%;
-    --secondary: 214 32% 17%;
+    --primary: 217 91% 70%;
+    --primary-foreground: 217 32% 4%;
+    --secondary: 217 32% 17%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 214 32% 17%;
-    --muted-foreground: 214 20% 65%;
-    --accent: 214 32% 17%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 217 20% 65%;
+    --accent: 217 32% 17%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214 32% 17%;
-    --input: 214 32% 17%;
-    --ring: 214 84% 65%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 217 91% 70%;
   }
 }
 
@@ -103,19 +103,27 @@
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--brand-blue)) 0%, hsl(var(--brand-blue-dark)) 100%);
+    background: linear-gradient(135deg, hsl(var(--clean-blue)) 0%, hsl(var(--clean-blue-dark)) 100%);
   }
 
   .service-card {
-    @apply bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2;
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100;
   }
 
   .btn-primary {
-    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105;
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg;
   }
 
   .btn-secondary {
-    @apply bg-white hover:bg-accent text-primary border-2 border-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105;
+    @apply bg-white hover:bg-accent text-primary border-2 border-primary px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+
+  .clean-card {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden;
+  }
+
+  .illustration-style {
+    background: linear-gradient(135deg, hsl(var(--clean-blue-light)) 0%, white 100%);
   }
 }
 
@@ -152,6 +160,15 @@
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out;
 }
@@ -162,4 +179,8 @@
 
 .animate-slide-in-right {
   animation: slideInRight 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

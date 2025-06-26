@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Clean blue theme colors
+				'clean-blue': {
+					50: 'hsl(217, 91%, 95%)',
+					100: 'hsl(217, 91%, 90%)',
+					200: 'hsl(217, 91%, 80%)',
+					300: 'hsl(217, 91%, 70%)',
+					400: 'hsl(217, 91%, 60%)',
+					500: 'hsl(217, 91%, 50%)',
+					600: 'hsl(217, 91%, 45%)',
+					700: 'hsl(217, 91%, 40%)',
+					800: 'hsl(217, 91%, 35%)',
+					900: 'hsl(217, 91%, 30%)',
+				},
+				'clean-navy': {
+					50: 'hsl(217, 32%, 95%)',
+					100: 'hsl(217, 32%, 90%)',
+					200: 'hsl(217, 32%, 80%)',
+					300: 'hsl(217, 32%, 70%)',
+					400: 'hsl(217, 32%, 60%)',
+					500: 'hsl(217, 32%, 50%)',
+					600: 'hsl(217, 32%, 40%)',
+					700: 'hsl(217, 32%, 30%)',
+					800: 'hsl(217, 32%, 20%)',
+					900: 'hsl(217, 32%, 17%)',
 				}
 			},
 			borderRadius: {
@@ -84,11 +110,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
