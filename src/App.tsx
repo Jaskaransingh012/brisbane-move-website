@@ -14,6 +14,8 @@ import Blog from "./pages/Blog";
 import Gallery from "./pages/Gallery";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
+import Chatbot from "./components/Chabot";
+
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,7 @@ const App = () => (
       <BrowserRouter>
         <div className="min-h-screen flex flex-col">
           <Navbar />
+          <Chatbot />
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />
