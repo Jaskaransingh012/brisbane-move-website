@@ -1,3 +1,4 @@
+
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, SendHorizonal } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -44,30 +45,30 @@ const Chatbot = () => {
       {!open && (
         <Button
           onClick={() => setOpen(true)}
-          className="fixed bottom-6 right-6 bg-yellow-500 hover:bg-yellow-600 rounded-full p-4 shadow-lg z-50"
+          className="fixed bottom-6 right-6 bg-lavender hover:bg-lavender-dark rounded-full p-4 shadow-lg z-50"
         >
-          <MessageCircle className="text-black" size={24} />
+          <MessageCircle className="text-purple-dark" size={24} />
         </Button>
       )}
 
       {/* Chatbox */}
       {open && (
-        <div className="fixed bottom-6 right-6 w-80 bg-white rounded-lg shadow-xl flex flex-col z-50 border border-gray-200">
-          <div className="flex items-center justify-between bg-yellow-500 text-black font-bold px-4 py-3 rounded-t-lg">
+        <div className="fixed bottom-6 right-6 w-80 bg-white rounded-lg shadow-xl flex flex-col z-50 border border-purple-200">
+          <div className="flex items-center justify-between bg-primary text-white font-bold px-4 py-3 rounded-t-lg">
             <span>Chat with us</span>
             <button onClick={() => setOpen(false)}>
               <X size={20} />
             </button>
           </div>
 
-          <div className="flex-1 max-h-80 overflow-y-auto p-4 space-y-3 bg-gray-50">
+          <div className="flex-1 max-h-80 overflow-y-auto p-4 space-y-3 bg-lavender-pale">
             {messages.map((msg, index) => (
               <div
                 key={index}
                 className={`text-sm px-3 py-2 rounded-lg max-w-[80%] ${
                   msg.sender === "user"
-                    ? "bg-blue-500 text-white self-end ml-auto"
-                    : "bg-gray-200 text-black"
+                    ? "bg-primary text-white self-end ml-auto"
+                    : "bg-white text-purple-dark border border-purple-200"
                 }`}
               >
                 {msg.text}
@@ -83,10 +84,10 @@ const Chatbot = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
               placeholder="Type your message..."
-              className="flex-1 px-3 py-2 text-sm border rounded-md focus:outline-none"
+              className="flex-1 px-3 py-2 text-sm border border-purple-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <button onClick={handleSend}>
-              <SendHorizonal className="text-blue-500 hover:text-blue-700" />
+              <SendHorizonal className="text-primary hover:text-primary/70" />
             </button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom purple and lavender colors
+				'purple-dark': '#3B1E54',
+				'purple-medium': '#6A4C93',
+				'lavender': '#B794F6',
+				'lavender-light': '#E9D5FF',
+				'lavender-pale': '#F3E8FF'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

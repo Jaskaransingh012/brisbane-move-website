@@ -3,68 +3,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Brisbane Removalists Design System */
+/* Brisbane Removalists Design System - Dark Purple & Lavender Theme */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 214 32% 12%;
+    --foreground: 260 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 214 32% 12%;
+    --card-foreground: 260 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 214 32% 12%;
+    --popover-foreground: 260 20% 15%;
 
-    --primary: 214 84% 45%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 260 60% 35%;
+    --primary-foreground: 300 100% 98%;
 
-    --secondary: 214 15% 96%;
-    --secondary-foreground: 214 32% 12%;
+    --secondary: 300 25% 95%;
+    --secondary-foreground: 260 20% 15%;
 
-    --muted: 214 15% 96%;
-    --muted-foreground: 214 16% 46%;
+    --muted: 300 25% 95%;
+    --muted-foreground: 260 15% 50%;
 
-    --accent: 214 84% 92%;
-    --accent-foreground: 214 32% 12%;
+    --accent: 285 80% 90%;
+    --accent-foreground: 260 20% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 31% 91%;
-    --input: 214 31% 91%;
-    --ring: 214 84% 45%;
+    --border: 300 20% 88%;
+    --input: 300 20% 88%;
+    --ring: 260 60% 35%;
 
     --radius: 0.5rem;
 
-    /* Brisbane Removalists Brand Colors */
-    --brand-blue: 214 84% 45%;
-    --brand-blue-light: 214 84% 92%;
-    --brand-blue-dark: 214 84% 35%;
-    --trust-blue: 214 100% 50%;
-    --reliable-blue: 210 100% 40%;
+    /* Brisbane Removalists Brand Colors - Purple & Lavender */
+    --brand-purple: 260 60% 35%;
+    --brand-purple-light: 285 80% 90%;
+    --brand-purple-dark: 260 80% 25%;
+    --lavender: 285 60% 75%;
+    --lavender-light: 300 80% 92%;
+    --lavender-dark: 270 50% 60%;
   }
 
   .dark {
-    --background: 214 32% 4%;
-    --foreground: 210 40% 98%;
-    --card: 214 32% 4%;
-    --card-foreground: 210 40% 98%;
-    --popover: 214 32% 4%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 214 84% 65%;
-    --primary-foreground: 214 32% 4%;
-    --secondary: 214 32% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 214 32% 17%;
-    --muted-foreground: 214 20% 65%;
-    --accent: 214 32% 17%;
-    --accent-foreground: 210 40% 98%;
+    --background: 260 30% 8%;
+    --foreground: 300 100% 98%;
+    --card: 260 30% 8%;
+    --card-foreground: 300 100% 98%;
+    --popover: 260 30% 8%;
+    --popover-foreground: 300 100% 98%;
+    --primary: 285 80% 70%;
+    --primary-foreground: 260 30% 8%;
+    --secondary: 260 30% 15%;
+    --secondary-foreground: 300 100% 98%;
+    --muted: 260 30% 15%;
+    --muted-foreground: 300 40% 70%;
+    --accent: 260 30% 15%;
+    --accent-foreground: 300 100% 98%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214 32% 17%;
-    --input: 214 32% 17%;
-    --ring: 214 84% 65%;
+    --border: 260 30% 15%;
+    --input: 260 30% 15%;
+    --ring: 285 80% 70%;
   }
 }
 
@@ -103,11 +104,11 @@
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--brand-blue)) 0%, hsl(var(--brand-blue-dark)) 100%);
+    background: linear-gradient(135deg, hsl(var(--brand-purple)) 0%, hsl(var(--brand-purple-dark)) 100%);
   }
 
   .service-card {
-    @apply bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2;
+    @apply bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-purple-100;
   }
 
   .btn-primary {
@@ -116,6 +117,14 @@
 
   .btn-secondary {
     @apply bg-white hover:bg-accent text-primary border-2 border-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105;
+  }
+
+  .lavender-accent {
+    @apply bg-gradient-to-r from-purple-400 to-purple-600;
+  }
+
+  .purple-gradient {
+    @apply bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800;
   }
 }
 
